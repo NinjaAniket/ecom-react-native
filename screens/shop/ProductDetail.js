@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet, Button} from 'react-native';
 import {useSelector} from 'react-redux';
 import Colors from '../../constants/Colors';
 
-const ProductDetail = ({navigation, addToCart}) => {
+const ProductDetail = ({navigation, addToCart, itemData}) => {
   const productId = navigation.getParam('productId');
   const selectedProducts = useSelector(state =>
     state.productReducer.availableProducts.find(
